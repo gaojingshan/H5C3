@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            background: -webkit-linear-gradient(top, rgb(223, 131, 131), rgb(70, 17, 17));
+        }
+
+        .biaopan {
+            width: 600px;
+            height: 600px;
+            border: 6px solid #000;
+            margin: 0 auto;
+            border-radius: 50%;
+            box-shadow: 13px 13px 13px rgba(0, 0, 0, .5);
+            background-color: #fff;
+            position: relative;
+        }
+
+        .biaopan .kedu {
+            position: absolute;
+            width: 15px;
+            height: 50px;
+            background-color: #333;
+            top: 50%;
+            left: 50%;
+            margin-left: -7.5px;
+            margin-top: -25px;
+        }
+
+        .miaozhen {
+            position: absolute;
+            width: 10px;
+            height: 300px;
+            background-color: rgb(230, 22, 22);
+            top: 75px;
+            left: 50%;
+            margin-left: -5px;
+            /* 让秒针的75%位置是旋转中心，transform-origin */
+            transform-origin: 50% 75%;
+            transform: rotate(0deg);
+        }
+
+        .fenzhen {
+            position: absolute;
+            width: 15px;
+            height: 220px;
+            background-color: rgb(13, 59, 211);
+            /* top值是圆盘的半径减去fenzhen的高度乘以transform-origin的第二个值75%（300-220*75%） */
+            top: 135px;
+            left: 50%;
+            margin-left: -7.5px;
+            /* 让秒针的75%位置是旋转中心，transform-origin 属性允许您改变被转换元素的位置。 */
+            transform-origin: 50% 75%;
+            transform: rotate(0deg);
+        }
+
+        .shizhen {
+            position: absolute;
+            width: 20px;
+            height: 160px;
+            background-color: rgb(44, 43, 44);
+            top: 180px;
+            left: 50%;
+            margin-left: -10px;
+            /* 让秒针的75%位置是旋转中心，transform-origin 属性允许您改变被转换元素的位置。 */
+            transform-origin: 50% 75%;
+            transform: rotate(0deg);
+
+        }
+
+        .biaopan .c {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border: 6px solid red;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            margin-top: -18.5px;
+            margin-left: -18.5px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="biaopan" id="biaopan">
+
+        <!-- 指针先后顺序很重要 -->
+        <div class="shizhen" id="shizhen"></div>
+        <div class="fenzhen" id="fenzhen"></div>
+        <div class="miaozhen" id="miaozhen"></div>
+
+        <!-- 中间的圆环 -->
+        <div class="c"></div>
+    </div>
+
+
+    <script>
+        var biaopan = document.getElementById('biaopan');
+        // 添加12个刻度
+        for (var i = 0; i < 12; i++) {
+            // 创建div标签
+            var kedu = document.createElement('div');
+            // 添加类名
+            kedu.className = 'kedu';
+            // 把kedu追加到biaopan元素最前面
+            biaopan.insertBefore(kedu, biaopan.firstChild);
+        }
+
+        var kedus = document.getElementsByClassName('kedu');
+        var miaozhen = document.getElementById('miaozhen');
+        var fenzhen = document.getElementById('fenzhen');
+        var shizhen = document.getElementById('shizhen');
+
+        // 分别旋转30度
+        // 写循环语句，形成齿轮状
+        for (var i = 0; i < 12; i++) {
+            kedus[i].style.transform = `rotate(${30 * i}deg) translateY(-260px)`;
+        }
+
+        // 封装一个获取时间的函数
+        function time() {
+            // 得到系统时间秒。new Date()得到日期对象，它可以打点调用getSeconds()方法。
+            // getSeconds()方法的作用就是得到系统时间的“秒”
+            // getMinutes()方法的作用就是得到系统时间的“分”
+            // getHours()方法的作用就是得到系统时间的“时” 24小时制
+            var s = new Date().getSeconds();
+            var m = new Date().getMinutes();
+            var h = new Date().getHours();
+
+            // 旋转
+            miaozhen.style.transform = `rotate(${s * 6}deg)`;
+            fenzhen.style.transform = `rotate(${m * 6 + s * 0.1}deg)`;
+            shizhen.style.transform = `rotate(${h % 12 * 30 + m * 0.5}deg)`
+        }
+        // 加载页面的时候就调用时间
+        time();
+        // 定时器
+        setInterval(function () {
+            time();
+        }, 1000)
+    </script>
+</body>
+
+</html>
