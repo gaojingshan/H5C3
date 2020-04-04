@@ -78,12 +78,18 @@
             }
         }
         render();
-        btn1.onclick=function(){
+        btn1.onclick = function () {
             idx--;
+            if (idx < 0) {
+                idx = 8;
+            }
             render();
         }
-        btn2.onclick=function(){
+        btn2.onclick = function () {
             idx++;
+            if (idx > 8) {
+                idx = 0;
+            }
             render();
         }
 
