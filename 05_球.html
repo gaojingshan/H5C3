@@ -1,11 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+        }
+
+        .stage {
+            width: 800px;
+            height: 400px;
+            perspective: 30300px;
+            margin: 100px auto;
+        }
+
+        .box {
+            width: 800px;
+            height: 400px;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .box p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            height: 100px;
+            margin-left: -40px;
+            margin-top: -50px;
+            border: 1px solid #000;
+            background-color: rgba(54, 210, 216, 0.63);
+        }
+    </style>
 </head>
+
 <body>
-    ff
+    <div class="stage">
+        <div class="box" id="box"></div>
+    </div>
+    <script>
+        var box = document.getElementById('box');
+        // 卡片个数，键名就是X轴的度数，键值是p，是这个旋转角度的p的个数
+        // 比如北极是1个p，因为90度就是北极，值是1。
+        // 每一个纬度上的p，都是绕X轴旋转同一个角度的。
+        var obj = {
+            '90': 1,
+            '70': 5,
+            '50': 9,
+            '30': 13,
+            '10': 17,
+            '0': 21,
+            '-10': 17,
+            '-30': 13,
+            '-50': 9,
+            '-70': 5,
+            '-90': 1,
+        };
+
+        // 创建obj，并且完成初始排列
+        for (var k in obj) {
+            for (var i = 0; i < obj[k]; i++) {
+                // 创建p
+                var p = document.createElement('p');
+                // 设置角度。同一个纬度的p标签，是有相同的rotateX值的。
+                // rotateY值是等差数列
+                p.style.transform = `rotateY(${i * (360 / obj[k])}deg) rotateX(${k}deg) translateZ(300px)`;
+                // 上树
+                box.appendChild(p);
+            }
+        }
+        // 做个定时器进行旋转
+        var x = 0;
+        var y = 0;
+        setInterval(function () {
+            x++;
+            y++;
+            box.style.transform = `rotateX(${x}deg) rotateY(${y}deg)`;
+        }, 20)
+
+    </script>
 </body>
+
 </html>
