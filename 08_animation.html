@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            position: relative;
+        }
+
+        .sjx {
+            width: 170px;
+            height: 170px;
+            /* animation: zhuan 1s ease 0s infinite; */
+            background: url(images/page.png);
+            background-position: 0 -311px;
+            position: absolute;
+            top: 100px;
+            left: 55px;
+            animation: zhuan2 2s ease 0s infinite;
+        }
+
+        .zfx {
+            width: 96px;
+            height: 96px;
+            background: url(images/page.png);
+            background-position: 0 -215px;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+            animation: zhuan2 2s ease .4s infinite;
+        }
+
+        .circle {
+            width: 137px;
+            height: 136px;
+            background: url(images/page.png);
+            background-position: 0 -482px;
+            position: absolute;
+            top: 130px;
+            left: 160px;
+            animation: zhuan2 2s ease .6s infinite;
+        }
+
+        .deng {
+            width: 191px;
+            height: 267px;
+            background: url(images/page.png);
+            background-position: 0 -620px;
+            position: absolute;
+            top: 400px;
+            left: 100px;
+        }
+
+        .guang {
+            width: 341px;
+            height: 256px;
+            /* opacity: 0; */
+            background: url(images/page.png);
+
+            background-position: 0 -887px;
+            position: absolute;
+            top: 340px;
+            left: 30px;
+            animation: dengpao 1s ease 0s infinite alternate;
+        }
+
+        /* @keyframes zhuan{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        } */
+
+        @keyframes zhuan2 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            70% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes dengpao{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <!-- 几何图形 -->
+        <div class="circle"></div>
+        <div class="sjx"></div>
+        <div class="zfx"></div>
+
+        <!-- 灯泡 -->
+        <div class="deng"></div>
+        <div class="guang"></div>
+
+        <!-- 火箭 -->
+        <div class="huojian"></div>
+    </div>
+</body>
+
+</html>

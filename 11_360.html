@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .row {
+            width: 1200px;
+            margin: 40px auto;
+            background-color: red;
+            height: 200px;
+        }
+
+        .box {
+            float: left;
+            width: 300px;
+            height: 308px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box1 {
+            background: url(images/3601.png) no-repeat;
+        }
+
+        .box2 {
+            background: url(images/3602.png) no-repeat;
+        }
+
+        .box3 {
+            background: url(images/3603.png) no-repeat;
+        }
+
+        .box4 {
+            background: url(images/3604.png) no-repeat;
+        }
+
+        .box:hover {
+            /* background-color: red; */
+        }
+
+        .box:hover .mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 308px;
+            background: linear-gradient(0deg, #7b43ff, #a05bff);
+            transform: translateY(0px);
+            opacity: 1;
+            z-index: 998;
+        }
+
+        .box .mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 308px;
+            background: linear-gradient(0deg, #7b43ff, #a05bff);
+            transform: translateY(307px);
+            opacity: 0;
+            z-index: 998;
+            transition: all .4s ease 0s;
+        }
+
+        .box .inn {
+            position: relative;
+            z-index: 999;
+            padding: 30px 0 0 30px;
+            font-size: 22px;
+            color: #fff;
+            transform: translateY(184px);
+            transition: all .4s ease 0s;
+        }
+
+        .box:hover .inn {
+            position: relative;
+            z-index: 999;
+            padding: 30px 0 0 30px;
+            font-size: 22px;
+            color: #fff;
+            transform: translateY(0px);
+        }
+
+        .box .inn h3 {
+            font-size: 22px;
+            margin-top: 18px;
+        }
+
+        .box .inn p {
+            margin-top: 17px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .box .inn a {
+            text-decoration: none;
+            font-size: 14px;
+            color: inherit;
+            display: block;
+            box-sizing: border-box;
+            width: 100px;
+            margin-top: 27px;
+            padding: 9px 21px;
+            border: 1px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="box box1">
+            <!-- 蒙版 -->
+            <div class="mask"></div>
+            <div class="inn">
+                <img src="images/3601_1.png" alt="">
+                <h3>权限管理</h3>
+                <p>像管理手机软件一样，轻松管理电脑软件里的广告弹窗、开机自启、捆绑推广等敏感权限，让电脑使用更加自在。</p>
+                <a href="#">立即体验</a>
+            </div>
+        </div>
+        <div class="box box2">
+            <!-- 蒙版 -->
+            <div class="mask"></div>
+            <div class="inn">
+                <img src="images/3602_1.png" alt="">
+                <h3>桌面助手</h3>
+                <p>一键整理桌面文件，让电脑更加清爽整洁，更有待办事项定时提醒、蓝光护眼、一键截图等快捷工具助您高效办公。</p>
+                <a href="#">立即体验</a>
+            </div>
+        </div>
+        <div class="box box3">
+            <!-- 蒙版 -->
+            <div class="mask"></div>
+            <div class="inn">
+                <img src="images/3603_1.png" alt="">
+                <h3>系统急救箱</h3>
+                <p>快速查杀电脑系统中的顽固病毒与驱动木马，及时修复网络、系统文件与系统设置的问题，保护电脑系统正常运行。</p>
+                <a href="#">立即体验</a>
+            </div>
+        </div>
+        <div class="box box4">
+            <!-- 蒙版 -->
+            <div class="mask"></div>
+            <div class="inn">
+                <img src="images/3604_1.png" alt="">
+                <h3>软件管家</h3>
+                <p>提供7000余款电脑软件的一站式高效下载服务，同时发现并净化软件问题，保护电脑纯净，还能超低价购买多种软件会员。</p>
+                <a href="#">立即体验</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.bootcss.com/jquery/3.5.0/jquery.min.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>
