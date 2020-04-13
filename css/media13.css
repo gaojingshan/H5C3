@@ -1,0 +1,142 @@
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.top {
+    width: 100%;
+    height: 68px;
+    border-bottom: 1px solid #ccc;
+    padding: 19px 20px;
+    box-sizing: border-box;
+}
+
+.top .top_l {
+    height: 30px;
+}
+
+.top .top_l .img1 {
+    cursor: pointer;
+    width: 126px;
+}
+
+.top .top_l .img2 {
+    width: 22px;
+    position: relative;
+    bottom: 4px;
+    cursor: pointer;
+}
+
+.top .nav {
+    float: left;
+    width: 864px;
+    position: relative;
+    left: 50%;
+    margin-left: -500px;
+}
+
+.top .nav a {
+    float: left;
+    text-decoration: none;
+    color: #000;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.top .nav a.cur {
+    color: #fa8919;
+}
+
+.top .nav a:hover {
+    color: #fa8919;
+}
+
+.top .top_r a {
+    float: left;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.w {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.box {
+    margin-top: 10px;
+}
+
+.box .box_l {
+    width: 740px;
+    height: 100px;
+    background-color: #ccc;
+}
+
+.box .box_r {
+    width: 310px;
+    height: 100px;
+    background-color: #ccc;
+}
+
+@media screen and (max-width: 1010px) {
+    .nav {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .nav {
+        display: none;
+    }
+    .top .top_r {
+        background-color: #fbf5ee;
+        padding: 0 13px;
+        height: 30px;
+        border-radius: 15px;
+    }
+    .top .top_r a {
+        line-height: 30px;
+        color: #fa8919;
+    }
+    .w {
+        display: none;
+    }
+    .tab {
+        position: relative;
+        font-size: 21px;
+        line-height: 21px;
+        padding: 20px 0 10px;
+    }
+    .tab span.cur {
+        color: #353535;
+    }
+    .tab span {
+        cursor: pointer;
+        color: #a5a5a5;
+    }
+    .tab span:nth-child(2) {
+        margin-left: 20px;
+    }
+    .tab i {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        display: block;
+        width: 24px;
+        height: 3px;
+        background-color: #fa8919;
+    }
+    .top {
+        height: 100px;
+        padding: 19px 20px 0px;
+    }
+}
