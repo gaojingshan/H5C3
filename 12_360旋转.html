@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        html {
+            background-color: #3a3c48;
+        }
+
+        .row {
+            width: 1200px;
+            margin: 40px auto;
+
+        }
+
+        .box {
+            background: url(images/function-bg.png);
+            width: 919px;
+            height: 407px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .outer {
+            background: url(images/circle-outer.png);
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -80px;
+            margin-left: -100px;
+            animation: outer 2s linear 0s infinite;
+        }
+
+        .inner {
+            background: url(images/circle-inner.png);
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -52px;
+            margin-left: -75px;
+            animation: inner 8s linear 0s infinite;
+        }
+
+        @keyframes outer {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes inner {
+            0% {
+                transform: rotate(0deg);
+            }
+            10% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-90deg);
+            }
+
+            35% {
+                transform: rotate(-90deg);
+            }
+
+            50% {
+                transform: rotate(-180deg);
+            }
+
+            60% {
+                transform: rotate(-180deg);
+            }
+
+            75% {
+                transform: rotate(-270deg);
+            }
+
+            85% {
+                transform: rotate(-270deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+
+            
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="box">
+            <div class="outer"></div>
+            <div class="inner"></div>
+        </div>
+    </div>
+</body>
+
+</html>
