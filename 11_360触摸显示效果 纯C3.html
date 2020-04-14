@@ -24,6 +24,9 @@
             overflow: hidden;
             transition: all .4s ease 0s;
         }
+        .box:hover{
+            width: 330px;
+        }
 
         .box1 {
             background: url(images/3601.png) no-repeat;
@@ -40,9 +43,7 @@
         .box4 {
             background: url(images/3604.png) no-repeat;
         }
-        .box:hover{
-            width: 330px;
-        }
+        
 
         .box:hover .mask {
             position: absolute;
@@ -60,7 +61,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 290px;
+            width: 300px;
             height: 308px;
             background: linear-gradient(0deg, #7b43ff, #a05bff);
             transform: translateY(307px);
@@ -160,22 +161,6 @@
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.bootcss.com/jquery/3.5.0/jquery.min.js"></script>
-    <script>
-        /* $('.box').mouseenter(function () {
-            $(this).css('width', 330).siblings().css('width', 290);
-            // console.log($(this).children('mask'));
-            var index=$(this).index();
-            $('.box .mask').css('width', 290);
-            $('.box').eq(index).children().eq(0).css('width', 330);
-
-        })
-        $('.box').mouseleave(function () {
-            $('.box').css('width', 300);
-            $('.box .mask').css('width', 300);
-        }) */
-    </script>
 </body>
 
 </html>
