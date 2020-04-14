@@ -12,8 +12,7 @@
             margin: 40px auto;
             overflow: hidden;
         }
-
-        .width {
+        .width{
             width: 1500px;
         }
 
@@ -41,12 +40,15 @@
         .box4 {
             background: url(images/3604.png) no-repeat;
         }
+        .box:hover{
+            width: 330px;
+        }
 
         .box:hover .mask {
             position: absolute;
             top: 0;
             left: 0;
-            width: 300px;
+            width: 330px;
             height: 308px;
             background: linear-gradient(0deg, #7b43ff, #a05bff);
             transform: translateY(0px);
@@ -58,7 +60,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 300px;
+            width: 290px;
             height: 308px;
             background: linear-gradient(0deg, #7b43ff, #a05bff);
             transform: translateY(307px);
@@ -70,20 +72,22 @@
         .box .inn {
             position: relative;
             z-index: 999;
-            padding: 30px 0 0 30px;
+            padding: 30px 30px 0 30px;
             font-size: 22px;
             color: #fff;
-            transform: translateY(184px);
+            top: 184px;
             transition: all .4s ease 0s;
+            /* transform: translateY(184px); */
         }
 
         .box:hover .inn {
             position: relative;
             z-index: 999;
-            padding: 30px 0 0 30px;
+            padding: 30px 30px 0 30px;
             font-size: 22px;
             color: #fff;
-            transform: translateY(0px);
+            top: 0;
+            /* transform: translateY(0px); */
         }
 
         .box .inn h3 {
@@ -159,10 +163,10 @@
 
     <script src="https://cdn.bootcss.com/jquery/3.5.0/jquery.min.js"></script>
     <script>
-        $('.box').mouseenter(function () {
+        /* $('.box').mouseenter(function () {
             $(this).css('width', 330).siblings().css('width', 290);
             // console.log($(this).children('mask'));
-            var index = $(this).index();
+            var index=$(this).index();
             $('.box .mask').css('width', 290);
             $('.box').eq(index).children().eq(0).css('width', 330);
 
@@ -170,7 +174,7 @@
         $('.box').mouseleave(function () {
             $('.box').css('width', 300);
             $('.box .mask').css('width', 300);
-        })
+        }) */
     </script>
 </body>
 
