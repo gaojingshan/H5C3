@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 650px)">
+    <link rel="stylesheet" href="css/pc.css" media="screen and (min-width: 650px)">
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <div class="logo"></div>
+            <div class="btn" id="btn"></div>
+            <div class="nav" id="nav">
+                <div class="closebtn" id="closebtn"></div>
+                <ul>
+                    <li>
+                        <a href="">网站栏目</a>
+                    </li>
+                    <li>
+                        <a href="">网站栏目</a>
+                    </li>
+                    <li>
+                        <a href="">网站栏目</a>
+                    </li>
+                    <li>
+                        <a href="">网站栏目</a>
+                    </li>
+                    <li>
+                        <a href="">网站栏目</a>
+                    </li>
+                    <li>
+                        <a href="">网站栏目</a>
+                    </li>
+                    <li>
+                        <a href="">网站栏目</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="course"></div>
+        <div class="ad"></div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.5.0/jquery.min.js"></script>
+    <script>
+        $('#btn').click(function () {
+            $("#nav").slideDown();
+        });
+
+        $('#closebtn').click(function () {
+            $('#nav').slideUp();
+        });
+
+        // 监控窗口变化，让窗口在变回原来的尺寸的时候，能够复原
+        $(window).resize(function () {
+            var windowWidth = $(window).width();
+
+            if (windowWidth > 650) {
+                $('#nav').show();
+            } else {
+                $('#nav').hide();
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+header .inner{
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+header .inner .logo{
+    float: left;
+    width: 120px;
+    height: 40px;
+    background-color: orange;
+}
+header .inner .nav{
+    float: left;
+    width: 800px;
+    display: block;
+}
+header .inner .nav ul{
+    list-style: none;
+}
+header .inner .nav ul li{
+    float: left;
+    padding: 0px 20px;
+}
+header .inner .nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.content{
+    width: 1000px;
+    margin: 50px auto;
+}
+.content .course{
+    float: left;
+    width: 600px;
+    height: 400px;
+    margin-right: 10px;
+    background-color: rgb(88, 209, 66);
+}
+.content .ad{
+    float: left;
+    width: 390px;
+    height: 400px;
+    background-color: rgb(22, 71, 230);
+}

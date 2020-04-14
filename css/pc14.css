@@ -1,0 +1,10 @@
+body{
+    background-color: green;
+}
+
+.pc{
+    display: block;
+}
+.yd{
+    display: none;
+}
