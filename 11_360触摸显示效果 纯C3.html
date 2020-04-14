@@ -12,6 +12,9 @@
             margin: 40px auto;
             overflow: hidden;
         }
+        .row:hover .box{
+            width: 290px;
+        }
         .width{
             width: 1500px;
         }
@@ -24,7 +27,7 @@
             overflow: hidden;
             transition: all .4s ease 0s;
         }
-        .box:hover{
+        .row:hover .box:hover{
             width: 330px;
         }
 
@@ -51,7 +54,6 @@
             left: 0;
             width: 330px;
             height: 308px;
-            background: linear-gradient(0deg, #7b43ff, #a05bff);
             transform: translateY(0px);
             opacity: 1;
             z-index: 998;
@@ -63,11 +65,25 @@
             left: 0;
             width: 300px;
             height: 308px;
-            background: linear-gradient(0deg, #7b43ff, #a05bff);
             transform: translateY(307px);
             opacity: 0;
             z-index: 998;
             transition: all .4s ease 0s;
+        }
+        .box1 .mask {
+            background: linear-gradient(0deg, #7b43ff, #a05bff);
+        }
+
+        .box2 .mask {
+            background: linear-gradient(0deg, #05b447, #02de8e);
+        }
+
+        .box3 .mask {
+            background: linear-gradient(0deg, #eb4940, #ff9b6a);
+        }
+
+        .box4 .mask {
+            background: linear-gradient(0deg, #6d3aff, #5d84ff);
         }
 
         .box .inn {
