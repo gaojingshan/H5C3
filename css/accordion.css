@@ -1,0 +1,116 @@
+body {
+    background-color: #999;
+}
+
+.accordion {
+    width: 960px;
+    height: 680px;
+    margin: 0px auto;
+    padding-top: 20px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.accordion ul {
+    width: 2000px;
+    overflow: hidden;
+}
+
+.accordion li {
+    width: 192px;
+    height: 170px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    box-sizing: border-box;
+    float: left;
+    transition: all .6s ease 0s;
+}
+
+.accordion li.no1 {
+    background: url(../images/accordion/image1.jpg) center center no-repeat;
+}
+
+.accordion li.no2 {
+    background: url(../images/accordion/image2.jpg) center center no-repeat;
+}
+
+.accordion li.no3 {
+    background: url(../images/accordion/image3.jpg) center center no-repeat/490px 470px;
+}
+
+.accordion li.no4 {
+    background: url(../images/accordion/image4.jpg) center center no-repeat;
+}
+
+.accordion li.no5 {
+    background: url(../images/accordion/image5.jpg) center center no-repeat;
+}
+
+.accordion li.no6 {
+    background: url(../images/accordion/image6.jpg) center center no-repeat;
+}
+
+.accordion li.no7 {
+    background: url(../images/accordion/image7.jpg) center center no-repeat;
+}
+
+.accordion li.no8 {
+    background: url(../images/accordion/image8.jpg) center center no-repeat;
+}
+
+.accordion li.no9 {
+    background: url(../images/accordion/image9.jpg) center center no-repeat;
+}
+
+.accordion li.no10 {
+    background: url(../images/accordion/image10.jpg) center center no-repeat;
+}
+
+.accordion li.no11 {
+    background: url(../images/accordion/image11.jpg) center center no-repeat;
+}
+
+.accordion li.no12 {
+    background: url(../images/accordion/image12.jpg) center center no-repeat;
+}
+
+.accordion li.no13 {
+    background: url(../images/accordion/image13.jpg) center center no-repeat;
+}
+
+.accordion li.no14 {
+    background: url(../images/accordion/image14.jpg) center center no-repeat;
+}
+
+.accordion li.no15 {
+    background: url(../images/accordion/image15.jpg) center center no-repeat;
+}
+
+.accordion li.no16 {
+    background: url(../images/accordion/image16.jpg) center center no-repeat;
+}
+
+.accordion li.no17 {
+    background: url(../images/accordion/image17.jpg) center center no-repeat;
+}
+
+.accordion li.no18 {
+    background: url(../images/accordion/image18.jpg) center center no-repeat;
+}
+
+.accordion li.no19 {
+    background: url(../images/accordion/image19.jpg) center center no-repeat;
+}
+
+.accordion li.no20 {
+    background: url(../images/accordion/image20.jpg) center center no-repeat;
+}
+
+/* .accordion ul:hover li{
+    width: 146.25px;
+    height: 480px;
+}
+.accordion ul:hover li:hover{
+    width: 375px;
+    height: 480px;
+} */
