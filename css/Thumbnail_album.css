@@ -14,7 +14,6 @@ html {
     float: left;
     width: 500px;
     height: 498px;
-    background-color: red;
     position: relative;
 }
 
@@ -24,11 +23,12 @@ html {
     position: absolute;
     left: 50%;
     top: 50%;
-    margin-left: -222px;
+    margin-left: -210px;
     margin-top: -185px;
     border-radius: 10px;
     overflow: hidden;
     display: none;
+    cursor: pointer;
 }
 
 .container .mainframe li.cur {
@@ -44,16 +44,18 @@ html {
     background-color: #111;
     display: block;
 }
-.container .mainframe li:hover .text p{
+
+.container .mainframe li:hover .text p {
     width: 444px;
     height: 100px;
     text-align: center;
     color: #fff;
     font-size: 30px;
-    line-height: 40px;
+    line-height: 34px;
     word-wrap: break-word;
 }
-.container .mainframe li:hover .text .captionShine{
+
+.container .mainframe li:hover .text .captionShine {
     position: absolute;
     bottom: 0;
     left: -444px;
@@ -63,11 +65,12 @@ html {
     background-position: -56px 0;
     animation: bigshine .4s linear 0s;
 }
-@keyframes bigshine{
-    from{
+
+@keyframes bigshine {
+    from {
         left: -444px;
     }
-    to{
+    to {
         left: 444px;
     }
 }
@@ -82,4 +85,72 @@ html {
     width: 293px;
     height: 498px;
     background-color: blue;
+    background: url(../images/Thumbnail_album/total_grid.png) no-repeat;
+    background-position: 9px 70px;
+    position: relative;
+    padding-top: 62px;
+    box-sizing: border-box;
+}
+.container .thumbnails .thumbnailimage{
+    float: left;
+    width: 64px;
+    height: 64px;
+    padding: 7px;
+}
+
+.container .thumbnails .thumb_container {
+    width: 64px;
+    height: 64px;
+    background-image: url(../images/Thumbnail_album/thumb_holder.png);
+    position: absolute;
+    cursor: pointer;
+}
+
+.container .thumbnails .large_thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 64px;
+    height: 64px;
+    transition: all .2s ease 0s;
+    overflow: hidden;
+}
+
+.container .thumbnails .large_thumb:hover {
+    top: -8px;
+    left: -8px;
+}
+
+.container .thumbnails .large_thumb .border {
+    width: 64px;
+    height: 64px;
+    background-image: url(../images/Thumbnail_album/thumb_border.png);
+}
+
+.container .thumbnails .large_thumb img {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 54px;
+    height: 54px;
+}
+
+.container .thumbnails .large_thumb:hover .shine {
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 54px;
+    height: 54px;
+    background: url(../images/Thumbnail_album/shine.png)no-repeat;
+    animation: smallshine 1s linear 0s;
+    display: block;
+}
+
+@keyframes smallshine {
+    from {
+        background-position: -150px 0;
+    }
+    to {
+        background-position: 99px 0;
+    }
 }
