@@ -1,0 +1,85 @@
+html {
+    margin: 0 auto;
+    background: #333 url(../images/Thumbnail_album/bgnoise.png);
+}
+
+.container {
+    width: 793px;
+    height: 498px;
+    margin: 50px auto;
+    background: #111 url(../images/Thumbnail_album/back_noise.png);
+}
+
+.container .mainframe {
+    float: left;
+    width: 500px;
+    height: 498px;
+    background-color: red;
+    position: relative;
+}
+
+.container .mainframe li {
+    width: 444px;
+    height: 370px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -222px;
+    margin-top: -185px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.container .mainframe li.cur {
+    display: block;
+}
+
+.container .mainframe li:hover .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 444px;
+    height: 100px;
+    background-color: #111;
+    display: block;
+}
+.container .mainframe li:hover .text p{
+    width: 444px;
+    height: 100px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    line-height: 40px;
+    word-wrap: break-word;
+}
+.container .mainframe li:hover .text .captionShine{
+    position: absolute;
+    bottom: 0;
+    left: -444px;
+    width: 444px;
+    height: 100px;
+    background: url(../images/Thumbnail_album/bigshine.png) no-repeat;
+    background-position: -56px 0;
+    animation: bigshine .4s linear 0s;
+}
+@keyframes bigshine{
+    from{
+        left: -444px;
+    }
+    to{
+        left: 444px;
+    }
+}
+
+.container .mainframe li img {
+    width: 444px;
+    height: 370px;
+}
+
+.container .thumbnails {
+    float: left;
+    width: 293px;
+    height: 498px;
+    background-color: blue;
+}
