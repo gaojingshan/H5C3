@@ -11,6 +11,10 @@
             padding: 0;
         }
 
+        html {
+            margin-bottom: 10000px;
+        }
+
         .box {
             position: relative;
         }
@@ -64,13 +68,67 @@
             height: 256px;
             /* opacity: 0; */
             background: url(images/page.png);
-
             background-position: 0 -887px;
             position: absolute;
             top: 340px;
             left: 30px;
             animation: dengpao 1s ease 0s infinite alternate;
         }
+
+        .leaf1 {
+            position: absolute;
+            background-image: url(images/page.png);
+            background-repeat: no-repeat;
+            width: 239px;
+            height: 150px;
+            background-position: 0 0;
+            top: 800px;
+            left: 60px;
+        }
+
+        .leaf2 {
+            position: absolute;
+            background-image: url(images/page.png);
+            background-repeat: no-repeat;
+            width: 90px;
+            height: 65px;
+            background-position: 0 -150px;
+            top: 700px;
+            left: -90px;
+            animation: leaf 4s ease 0s infinite;
+        }
+
+        .huojian {
+            background: url(images/page.png);
+            width: 225px;
+            height: 220px;
+            background-position: -239px 0;
+            position: absolute;
+            top: 1100px;
+            left: 100px;
+            animation: huojian .2s linear 0s infinite alternate;
+        }
+
+        .line {
+            background: url(images/page.png);
+            width: 156px;
+            height: 153px;
+            background-position: -239px -220px;
+            position: absolute;
+            top: 1100px;
+            animation: line 1s linear 0s infinite;
+        }
+        .line2 {
+            background: url(images/page.png);
+            width: 75px;
+            height: 73px;
+            background-position: -165px -150px;
+            position: absolute;
+            top: 1100px;
+            left: 450px;
+            animation: line 1s linear .3s infinite;
+        }
+
 
         /* @keyframes zhuan{
             from{
@@ -95,12 +153,57 @@
             }
         }
 
-        @keyframes dengpao{
-            from{
+        @keyframes dengpao {
+            from {
                 opacity: 0;
             }
-            to{
+
+            to {
                 opacity: 1;
+            }
+        }
+
+        @keyframes leaf {
+            0% {
+                left: -90px;
+                top: 700px;
+                opacity: 1;
+            }
+
+            50% {
+                left: 300px;
+                top: 1000px;
+                opacity: 0;
+            }
+
+            100% {
+                left: 300px;
+                top: 1000px;
+                opacity: 0;
+            }
+        }
+
+        @keyframes huojian {
+            0% {
+                transform: translateX(0px) translateY(0px);
+            }
+
+            100% {
+                transform: translateX(40px) translateY(40px);
+            }
+        }
+
+        @keyframes line {
+            0% {
+                opacity: 0;
+                transform: translateX(500px) translateY(-500px);
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-500px) translateY(500px);
             }
         }
     </style>
@@ -117,8 +220,14 @@
         <div class="deng"></div>
         <div class="guang"></div>
 
+        <!-- 树叶 -->
+        <div class="leaf1"></div>
+        <div class="leaf2"></div>
+
         <!-- 火箭 -->
         <div class="huojian"></div>
+        <div class="line"></div>
+        <div class="line2"></div>
     </div>
 </body>
 
